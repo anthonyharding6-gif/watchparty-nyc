@@ -9,7 +9,7 @@
 <meta property="og:description" content="Rooftop. Sparklers. Every match. For the culture.">
 <meta property="og:image" content="img/harbor-2.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--orange:#F5A623;--blue:#4E7CC4;--txt:#f3f5f8;--mut:#9aa6b6;--line:rgba(255,255,255,.13);--bg:#070809;}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
@@ -23,7 +23,11 @@ body{background:var(--bg);color:var(--txt);font-family:'Space Grotesk',system-ui
 @keyframes cf{0%{opacity:0}3%{opacity:1}30%{opacity:1}36%{opacity:0}100%{opacity:0}}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,9,.82) 0%,rgba(7,8,9,.4) 30%,rgba(7,8,9,.55) 62%,rgba(7,8,9,.94) 100%);z-index:1}
 .hero-top{position:relative;z-index:2;padding:34px 20px 0;text-align:center}
-.brand{width:min(430px,88%);height:auto;filter:drop-shadow(0 6px 24px rgba(0,0,0,.7))}
+.brand-icon{height:120px;filter:drop-shadow(0 8px 22px rgba(0,0,0,.65))}
+.wordmark{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(44px,12vw,62px);line-height:.95;margin-top:4px;text-shadow:0 3px 18px rgba(0,0,0,.7)}
+.wordmark .q{color:var(--orange)}.wordmark .p{color:var(--blue)}
+.tagline{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:clamp(18px,5vw,24px);color:#e7ecf3;margin-top:2px;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+.tagline .b{color:var(--blue);font-style:normal}.tagline .o{color:var(--orange);font-style:normal}
 .hero-bot{position:relative;z-index:2;padding:0 20px 52px;max-width:680px;margin:0 auto;width:100%}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);border:1px solid rgba(245,166,35,.55);background:rgba(7,8,9,.5);backdrop-filter:blur(6px);padding:9px 16px;border-radius:999px}
 .pip{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 12px var(--orange);animation:p 1.8s infinite}@keyframes p{50%{opacity:.4;transform:scale(.7)}}
@@ -81,7 +85,11 @@ footer a{color:var(--orange);text-decoration:none}.powered{margin-top:10px;font-
 
 <section class="hero">
   <div class="slide s1"></div><div class="slide s2"></div><div class="slide s3"></div>
-  <div class="hero-top"><img class="brand" src="img/qns-lockup-t.png" alt="QNS Pickup — For The Culture"></div>
+  <div class="hero-top">
+    <img class="brand-icon" src="img/qns-icon.png" alt="QNS Pickup">
+    <div class="wordmark"><span class="q">Q</span>ns <span class="p">P</span>ickup</div>
+    <div class="tagline">“<span class="b">F</span>or The <span class="o">C</span>ulture”</div>
+  </div>
   <div class="hero-bot">
     <span class="eyebrow"><span class="pip"></span> Harbor NYC · Hell's Kitchen</span>
     <h1>WORLD CUP<br><span class="o">WATCH PARTIES</span></h1>
@@ -97,11 +105,6 @@ footer a{color:var(--orange);text-decoration:none}.powered{margin-top:10px;font-
   <div class="section-h"><div class="k">Get your table</div><h2>THE MATCHES</h2></div>
   <div class="filter" id="filter"></div>
   <div class="events" id="events"></div>
-
-  <div class="follow">
-    <img src="img/qns-lockup-t.png" alt="Follow QNS Pickup">
-    <p>Follow QNS — scan the code. For the culture.</p>
-  </div>
 
   <div class="venue">
     <div class="section-h"><div class="k">The room</div><h2>THIS IS HARBOR</h2></div>
