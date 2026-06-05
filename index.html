@@ -137,6 +137,8 @@ const EVENTS = [
     ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11-3-2/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176c5f294841e7938a1cde0a1e6232' },
   { a:'MEXICO', b:'SOUTH KOREA', fa:'🇲🇽', fb:'🇰🇷', date:'2026-06-18', time:'9:00 PM', badge:'',
     ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11-3/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176d022cd04ec3a32c51740a1e6243' },
+  { a:'ARGENTINA', b:'JORDAN', fa:'🇦🇷', fb:'🇯🇴', date:'2026-06-27', time:'', badge:'',
+    ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11-3-4/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a230e979e844b3087884cc60a1e627e' },
 ];
 const fmtDate = d => new Date(d+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
 const daysAway = d => { const n=Math.ceil((new Date(d+'T12:00:00')-new Date())/864e5); return n<=0?'Today':(n===1?'Tomorrow':n+' days away'); };
