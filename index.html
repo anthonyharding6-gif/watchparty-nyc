@@ -125,17 +125,17 @@ footer a{color:var(--orange);text-decoration:none}.powered{margin-top:10px;font-
 
 <script>
 const EVENTS = [
-  { a:'MEXICO', b:'SOUTH AFRICA', fa:'🇲🇽', fb:'🇿🇦', date:'2026-06-11', badge:'Opening Day',
+  { a:'MEXICO', b:'SOUTH AFRICA', fa:'🇲🇽', fb:'🇿🇦', date:'2026-06-11', time:'3:00 PM', badge:'Opening Day',
     ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-10/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176b59b21841d3b7c7439f0a1e626e' },
   { a:'PORTUGAL', b:'DR CONGO', fa:'🇵🇹', fb:'🇨🇩', date:'2026-06-17', badge:'',
     ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-190-5-12/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176bf04ee8496aa733439f0a1e626e' },
-  { a:'ENGLAND', b:'CROATIA', fa:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', fb:'🇭🇷', date:'2026-06-17', badge:'',
+  { a:'ENGLAND', b:'CROATIA', fa:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', fb:'🇭🇷', date:'2026-06-17', time:'4:00 PM', badge:'',
     ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176c1d9a284f5c8fe245be0a1e60d7' },
-  { a:'CANADA', b:'QATAR', fa:'🇨🇦', fb:'🇶🇦', date:'2026-06-18', badge:'',
+  { a:'CANADA', b:'QATAR', fa:'🇨🇦', fb:'🇶🇦', date:'2026-06-18', time:'6:00 PM', badge:'',
     ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11-2/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176cbb537442969f6156b30a1e638d' },
   { a:'SPAIN', b:'SAUDI ARABIA', fa:'🇪🇸', fb:'🇸🇦', date:'2026-06-21', badge:'',
     ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11-3-2/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176c5f294841e7938a1cde0a1e6232' },
-  { a:'MEXICO', b:'SOUTH KOREA', fa:'🇲🇽', fb:'🇰🇷', date:'', badge:'Date TBA',
+  { a:'MEXICO', b:'SOUTH KOREA', fa:'🇲🇽', fb:'🇰🇷', date:'2026-06-18', time:'9:00 PM', badge:'',
     ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11-3/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176d022cd04ec3a32c51740a1e6243' },
 ];
 const fmtDate = d => new Date(d+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
@@ -146,7 +146,7 @@ const ev = document.getElementById('events');
 function render(f){
   ev.innerHTML = EVENTS.filter(e=>!f||e.a===f||e.b===f).sort((x,y)=>sortKey(x).localeCompare(sortKey(y))).map(e=>`
     <div class="ev">
-      <div class="top"><div><div class="flags">${e.fa} ${e.fb}</div>${e.date?`<div class="date">${fmtDate(e.date)}</div>`:''}</div>${e.badge?`<div class="badge">${e.badge}</div>`:''}</div>
+      <div class="top"><div><div class="flags">${e.fa} ${e.fb}</div>${e.date?`<div class="date">${fmtDate(e.date)}${e.time?' · '+e.time:''}</div>`:''}</div>${e.badge?`<div class="badge">${e.badge}</div>`:''}</div>
       <div class="match">${e.a} <span>v</span> ${e.b}</div>
       ${e.date?`<div class="away">🟠 ${daysAway(e.date)}</div>`:''}
       <div class="row"><img class="qr" alt="Scan for tickets" src="${qr(e.ticket)}"><div class="cta"><a class="btn" href="${e.ticket}" target="_blank" rel="noopener">Get Tickets ⚽</a><div class="scan">↑ or scan the code</div></div></div>
