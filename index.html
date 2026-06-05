@@ -4,78 +4,97 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NYC World Cup Watch Parties · Harbor NYC</title>
-<meta name="description" content="The biggest World Cup 2026 watch parties in NYC at Harbor — rooftop, sparklers, every match. Get tickets.">
-<meta property="og:title" content="NYC's Biggest World Cup Watch Parties — Harbor">
-<meta property="og:description" content="Feel the crowd. Every match. Rooftop watch parties in Hell's Kitchen. Get your table.">
+<meta name="description" content="World Cup 2026 watch parties at Harbor NYC — rooftop, sparklers, every match. Get tickets.">
+<meta property="og:title" content="Rooftop. Sparklers. Every Match. — Harbor NYC">
+<meta property="og:description" content="World Cup 2026 watch parties in Hell's Kitchen. Feel the crowd — don't watch it alone.">
+<meta property="og:image" content="img/harbor-2.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#05080a;--card:rgba(255,255,255,.03);--line:rgba(255,255,255,.09);--green:#39ff14;--greend:#1f9c0a;--txt:#eaf3ea;--mut:#7d927d;}
+:root{--green:#39ff14;--txt:#f0f6ef;--mut:#9fb4a0;--line:rgba(255,255,255,.12);}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--txt);font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-canvas#fx{position:fixed;inset:0;z-index:-2}
-.veil{position:fixed;inset:0;z-index:-1;background:radial-gradient(900px 600px at 50% -10%,rgba(57,255,20,.16),transparent 60%),linear-gradient(180deg,rgba(5,8,10,.2),var(--bg) 70%)}
+body{background:#05080a;color:var(--txt);font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .wrap{max-width:680px;margin:0 auto;padding:0 20px}
-/* hero */
-header{text-align:center;padding:70px 0 26px}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--green);border:1px solid rgba(57,255,20,.4);background:rgba(57,255,20,.06);padding:8px 16px;border-radius:999px}
+
+/* ===== HERO with crossfading venue photos ===== */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:cf 21s infinite;will-change:opacity}
+.s1{background-image:url(img/harbor-2.png);animation-delay:0s}
+.s2{background-image:url(img/harbor-1.png);animation-delay:7s}
+.s3{background-image:url(img/harbor-3.png);animation-delay:14s}
+@keyframes cf{0%{opacity:0}3%{opacity:1}30%{opacity:1}36%{opacity:0}100%{opacity:0}}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,10,.55) 0%,rgba(5,8,10,.25) 35%,rgba(5,8,10,.78) 78%,#05080a 100%);z-index:1}
+.hero-in{position:relative;z-index:2;padding:0 20px 56px;max-width:680px;margin:0 auto;width:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--green);border:1px solid rgba(57,255,20,.5);background:rgba(5,8,10,.5);backdrop-filter:blur(6px);padding:9px 16px;border-radius:999px}
 .pip{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);animation:p 1.8s infinite}@keyframes p{50%{opacity:.4;transform:scale(.7)}}
-h1{font-family:'Anton';font-size:clamp(46px,12vw,92px);line-height:.92;letter-spacing:-1px;margin:24px 0 0}
-h1 .g{color:var(--green);text-shadow:0 0 40px rgba(57,255,20,.45)}
-.lede{color:var(--mut);font-size:clamp(15px,4vw,19px);margin:18px auto 0;max-width:440px}
-/* countdown */
-.cd{display:flex;justify-content:center;gap:10px;margin:34px 0 6px}
-.cd .b{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 4px;width:78px;text-align:center}
-.cd .n{font-family:'Anton';font-size:40px;color:var(--green);line-height:1}
-.cd .l{font-size:11px;letter-spacing:2px;color:var(--mut);text-transform:uppercase;margin-top:6px}
-.cdlbl{text-align:center;color:var(--mut);font-size:12px;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
-/* filter */
-.filter{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:38px 0 8px}
-.chip{font-size:14px;font-weight:600;padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer;transition:.15s}
-.chip.on,.chip:hover{border-color:var(--green);background:rgba(57,255,20,.1);color:#dfffd6}
-/* events */
-.events{display:flex;flex-direction:column;gap:16px;margin:26px 0 10px}
-.ev{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;transition:.2s}
-.ev:hover{border-color:rgba(57,255,20,.4);transform:translateY(-2px)}
+h1{font-family:'Anton';font-size:clamp(52px,15vw,104px);line-height:.9;letter-spacing:-1px;margin:20px 0 0;text-shadow:0 4px 30px rgba(0,0,0,.6)}
+h1 .g{color:var(--green);text-shadow:0 0 40px rgba(57,255,20,.5)}
+.lede{color:#dfeede;font-size:clamp(16px,4.4vw,20px);margin:18px 0 0;max-width:460px;text-shadow:0 2px 14px rgba(0,0,0,.7)}
+.cdlbl{margin-top:30px;color:var(--green);font-size:12px;letter-spacing:3px;text-transform:uppercase}
+.cd{display:flex;gap:9px;margin-top:10px}
+.cd .b{background:rgba(5,8,10,.55);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:13px;padding:12px 4px;width:72px;text-align:center}
+.cd .n{font-family:'Anton';font-size:36px;color:var(--green);line-height:1}.cd .l{font-size:10px;letter-spacing:2px;color:var(--mut);text-transform:uppercase;margin-top:5px}
+
+/* ===== EVENTS ===== */
+.section-h{text-align:center;padding:54px 0 6px}
+.section-h .k{color:var(--green);font-size:12px;letter-spacing:3px;text-transform:uppercase}
+.section-h h2{font-family:'Anton';font-size:clamp(34px,9vw,52px);margin-top:8px;letter-spacing:-.5px}
+.filter{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:22px 0 4px}
+.chip{font-size:14px;font-weight:600;padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--txt);cursor:pointer;transition:.15s}
+.chip.on,.chip:hover{border-color:var(--green);background:rgba(57,255,20,.12);color:#dfffd6}
+.events{display:flex;flex-direction:column;gap:16px;margin:24px 0 10px}
+.ev{position:relative;border:1px solid var(--line);border-radius:20px;padding:22px;overflow:hidden;background:rgba(255,255,255,.045);backdrop-filter:blur(10px);transition:.2s}
+.ev:hover{border-color:rgba(57,255,20,.5);transform:translateY(-2px)}
 .ev .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-.ev .badge{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--green);border:1px solid rgba(57,255,20,.4);padding:5px 10px;border-radius:8px;white-space:nowrap}
+.ev .badge{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#04210a;background:var(--green);padding:5px 11px;border-radius:8px;white-space:nowrap;font-weight:700}
 .ev .date{font-size:13px;color:var(--mut);letter-spacing:1px;text-transform:uppercase}
-.ev .match{font-family:'Anton';font-size:34px;line-height:1.05;margin:12px 0 2px;letter-spacing:-.5px}
-.ev .flags{font-size:30px;margin-bottom:6px;letter-spacing:6px}
-.ev .away{font-size:14px;color:#9affc0;font-weight:600}
+.ev .flags{font-size:30px;margin-bottom:4px;letter-spacing:6px}
+.ev .match{font-family:'Anton';font-size:34px;line-height:1.05;margin:2px 0;letter-spacing:-.5px}
+.ev .away{font-size:14px;color:#9affc0;font-weight:600;margin-top:4px}
 .ev .row{display:flex;align-items:center;gap:16px;margin-top:18px}
-.ev .qr{width:104px;height:104px;border-radius:12px;background:#05080a;border:1px solid var(--line);flex:none;display:block}
+.ev .qr{width:104px;height:104px;border-radius:12px;border:1px solid var(--line);flex:none;display:block;background:#05080a}
 .ev .cta{flex:1}
-.btn{display:block;text-align:center;background:var(--green);color:#04210a;font-weight:700;font-size:17px;text-decoration:none;padding:15px;border-radius:13px;box-shadow:0 8px 26px rgba(57,255,20,.3)}
+.btn{display:block;text-align:center;background:var(--green);color:#04210a;font-weight:700;font-size:17px;text-decoration:none;padding:15px;border-radius:13px;box-shadow:0 8px 26px rgba(57,255,20,.35)}
 .btn:active{transform:scale(.98)}
 .scan{font-size:11px;color:var(--mut);text-align:center;margin-top:6px;letter-spacing:1px}
-.maplink{display:block;text-align:center;color:var(--mut);font-size:13px;text-decoration:none;margin-top:12px}
-.maplink:hover{color:var(--green)}
-/* venue + footer */
-.venue{margin:36px 0 10px;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
-.venue h3{font-family:'Anton';font-size:26px}.venue p{color:var(--mut);font-size:14px;margin-top:6px}
-.venue iframe{width:100%;height:200px;border:0;border-radius:14px;margin-top:16px;filter:grayscale(.4) invert(.92) hue-rotate(180deg) contrast(.9)}
-footer{text-align:center;color:var(--mut);font-size:13px;padding:30px 0 60px}
-footer a{color:#9affc0;text-decoration:none}
-.powered{margin-top:10px;font-size:12px;letter-spacing:1px}
+.maplink{display:block;text-align:center;color:var(--mut);font-size:13px;text-decoration:none;margin-top:12px}.maplink:hover{color:var(--green)}
+
+/* ===== VENUE / GALLERY ===== */
+.venue{text-align:center;margin:30px 0 0}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.gallery img{width:100%;height:160px;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+.gallery img:first-child{grid-column:1/3;height:230px}
+.venue h3{font-family:'Anton';font-size:30px}.venue p{color:var(--mut);font-size:14px;margin-top:6px}
+.venue iframe{width:100%;height:200px;border:0;border-radius:14px;margin-top:16px;filter:grayscale(.3) invert(.92) hue-rotate(180deg) contrast(.9)}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:34px 0 60px}
+footer a{color:#9affc0;text-decoration:none}.powered{margin-top:10px;font-size:12px;letter-spacing:1px}
 </style>
 </head>
 <body>
-<canvas id="fx"></canvas><div class="veil"></div>
 
-<header class="wrap">
-  <span class="eyebrow"><span class="pip"></span> Harbor NYC · Hell's Kitchen</span>
-  <h1>NYC'S WORLD CUP<br><span class="g">WATCH PARTIES</span></h1>
-  <p class="lede">Rooftop. Sparklers. Every match. Feel the crowd — don't watch it alone.</p>
-  <div class="cdlbl">Kickoff · June 11</div>
-  <div class="cd" id="cd"></div>
-</header>
+<section class="hero">
+  <div class="slide s1"></div><div class="slide s2"></div><div class="slide s3"></div>
+  <div class="hero-in">
+    <span class="eyebrow"><span class="pip"></span> Harbor NYC · Hell's Kitchen</span>
+    <h1>ROOFTOP.<br>SPARKLERS.<br><span class="g">EVERY MATCH.</span></h1>
+    <p class="lede">World Cup 2026 watch parties at Harbor. Feel the crowd — don't watch it alone.</p>
+    <div class="cdlbl">Kickoff · June 11</div>
+    <div class="cd" id="cd"></div>
+  </div>
+</section>
 
 <main class="wrap">
+  <div class="section-h"><div class="k">Get your table</div><h2>THE MATCHES</h2></div>
   <div class="filter" id="filter"></div>
   <div class="events" id="events"></div>
 
   <div class="venue">
+    <div class="section-h"><div class="k">The room</div><h2>THIS IS HARBOR</h2></div>
+    <div class="gallery">
+      <img src="img/harbor-2.png" alt="Harbor rooftop">
+      <img src="img/harbor-3.png" alt="Harbor lounge">
+      <img src="img/harbor-1.png" alt="Harbor interior">
+    </div>
     <h3>HARBOR NYC</h3>
     <p>621 W 46th St · Hell's Kitchen · Rooftop + Stafford Room</p>
     <iframe loading="lazy" src="https://www.google.com/maps?q=621+W+46th+St,+New+York,+NY&output=embed"></iframe>
@@ -89,7 +108,6 @@ footer a{color:#9affc0;text-decoration:none}
 </main>
 
 <script>
-/* ===== EVENTS (edit links here — confirm against the fixed Dream Hospitality links) ===== */
 const EVENTS = [
   { a:'MEXICO', b:'SOUTH AFRICA', fa:'🇲🇽', fb:'🇿🇦', date:'2026-06-11', badge:'Opening Day',
     ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-10/tickets' },
@@ -104,52 +122,28 @@ const EVENTS = [
   { a:'CROATIA', b:'GHANA', fa:'🇭🇷', fb:'🇬🇭', date:'2026-06-27', badge:'',
     ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11-3-3/tickets' },
 ];
-
 const fmtDate = d => new Date(d+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
-const daysAway = d => { const ms=new Date(d+'T12:00:00')-new Date(); const n=Math.ceil(ms/864e5); return n<=0?'Today':(n===1?'Tomorrow':n+' days away'); };
-const qr = url => `https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=8&bgcolor=05-08-0a&color=57-255-20&data=${encodeURIComponent(url)}`;
-
+const daysAway = d => { const n=Math.ceil((new Date(d+'T12:00:00')-new Date())/864e5); return n<=0?'Today':(n===1?'Tomorrow':n+' days away'); };
+const qr = url => `https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=8&bgcolor=5-8-10&color=57-255-20&data=${encodeURIComponent(url)}`;
 const ev = document.getElementById('events');
-function render(filter){
-  ev.innerHTML = EVENTS.filter(e=>!filter||e.a===filter||e.b===filter).map(e=>`
+function render(f){
+  ev.innerHTML = EVENTS.filter(e=>!f||e.a===f||e.b===f).map(e=>`
     <div class="ev">
-      <div class="top">
-        <div><div class="flags">${e.fa} ${e.fb}</div><div class="date">${fmtDate(e.date)}</div></div>
-        ${e.badge?`<div class="badge">${e.badge}</div>`:''}
-      </div>
+      <div class="top"><div><div class="flags">${e.fa} ${e.fb}</div><div class="date">${fmtDate(e.date)}</div></div>${e.badge?`<div class="badge">${e.badge}</div>`:''}</div>
       <div class="match">${e.a} <span style="color:#7d927d">v</span> ${e.b}</div>
       <div class="away">🟢 ${daysAway(e.date)}</div>
-      <div class="row">
-        <img class="qr" alt="Scan for tickets" src="${qr(e.ticket)}">
-        <div class="cta"><a class="btn" href="${e.ticket}" target="_blank" rel="noopener">Get Tickets ⚽</a><div class="scan">↑ or scan the code</div></div>
-      </div>
+      <div class="row"><img class="qr" alt="Scan for tickets" src="${qr(e.ticket)}"><div class="cta"><a class="btn" href="${e.ticket}" target="_blank" rel="noopener">Get Tickets ⚽</a><div class="scan">↑ or scan the code</div></div></div>
       <a class="maplink" href="https://www.google.com/maps?q=621+W+46th+St,+New+York,+NY" target="_blank">📍 Harbor NYC · 621 W 46th St</a>
     </div>`).join('');
 }
 render(null);
-
-/* country filter */
-const countries = [...new Set(EVENTS.flatMap(e=>[e.a,e.b]))];
-const fl = document.getElementById('filter');
-fl.innerHTML = `<div class="chip on" data-c="">All matches</div>` + countries.map(c=>`<div class="chip" data-c="${c}">${c}</div>`).join('');
-fl.addEventListener('click',e=>{ const c=e.target.closest('.chip'); if(!c)return; [...fl.children].forEach(x=>x.classList.remove('on')); c.classList.add('on'); render(c.dataset.c||null); });
-
-/* countdown to opener */
-const target = new Date('2026-06-11T00:00:00');
-const cd = document.getElementById('cd');
-function tick(){
-  let s=Math.max(0,Math.floor((target-new Date())/1000));
-  const d=Math.floor(s/86400);s-=d*86400;const h=Math.floor(s/3600);s-=h*3600;const m=Math.floor(s/60);const ss=s-m*60;
-  const cell=(n,l)=>`<div class="b"><div class="n">${String(n).padStart(2,'0')}</div><div class="l">${l}</div></div>`;
-  cd.innerHTML=cell(d,'Days')+cell(h,'Hrs')+cell(m,'Min')+cell(ss,'Sec');
-}
+const countries=[...new Set(EVENTS.flatMap(e=>[e.a,e.b]))];
+const fl=document.getElementById('filter');
+fl.innerHTML=`<div class="chip on" data-c="">All matches</div>`+countries.map(c=>`<div class="chip" data-c="${c}">${c}</div>`).join('');
+fl.addEventListener('click',e=>{const c=e.target.closest('.chip');if(!c)return;[...fl.children].forEach(x=>x.classList.remove('on'));c.classList.add('on');render(c.dataset.c||null);});
+const target=new Date('2026-06-11T00:00:00'),cd=document.getElementById('cd');
+function tick(){let s=Math.max(0,Math.floor((target-new Date())/1000));const d=Math.floor(s/86400);s-=d*86400;const h=Math.floor(s/3600);s-=h*3600;const m=Math.floor(s/60);const ss=s-m*60;const c=(n,l)=>`<div class="b"><div class="n">${String(n).padStart(2,'0')}</div><div class="l">${l}</div></div>`;cd.innerHTML=c(d,'Days')+c(h,'Hrs')+c(m,'Min')+c(ss,'Sec');}
 tick();setInterval(tick,1000);
-
-/* energy pulse canvas */
-const cv=document.getElementById('fx'),ctx=cv.getContext('2d');let W,H,dots;
-function init(){W=cv.width=innerWidth;H=cv.height=innerHeight;dots=Array.from({length:46},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2+1,a:Math.random(),sp:Math.random()*.02+.005}));}
-init();addEventListener('resize',init);
-(function loop(){ctx.clearRect(0,0,W,H);for(const d of dots){d.a+=d.sp;const o=(Math.sin(d.a)+1)/2;ctx.beginPath();ctx.arc(d.x,d.y,d.r,0,7);ctx.fillStyle=`rgba(57,255,20,${o*.5})`;ctx.shadowBlur=12;ctx.shadowColor='rgba(57,255,20,.6)';ctx.fill();}requestAnimationFrame(loop);})();
 </script>
 </body>
 </html>
