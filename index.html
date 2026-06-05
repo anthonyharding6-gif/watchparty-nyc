@@ -3,97 +3,110 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NYC World Cup Watch Parties · Harbor NYC</title>
-<meta name="description" content="World Cup 2026 watch parties at Harbor NYC — rooftop, sparklers, every match. Get tickets.">
-<meta property="og:title" content="Rooftop. Sparklers. Every Match. — Harbor NYC">
-<meta property="og:description" content="World Cup 2026 watch parties in Hell's Kitchen. Feel the crowd — don't watch it alone.">
+<title>QNS Pickup · World Cup Watch Parties @ Harbor NYC</title>
+<meta name="description" content="QNS Pickup World Cup 2026 watch parties at Harbor NYC. For the culture. Get your tickets.">
+<meta property="og:title" content="QNS Pickup · World Cup Watch Parties @ Harbor NYC">
+<meta property="og:description" content="Rooftop. Sparklers. Every match. For the culture.">
 <meta property="og:image" content="img/harbor-2.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--green:#39ff14;--txt:#f0f6ef;--mut:#9fb4a0;--line:rgba(255,255,255,.12);}
+:root{--orange:#F5A623;--blue:#4E7CC4;--txt:#f3f5f8;--mut:#9aa6b6;--line:rgba(255,255,255,.13);--bg:#070809;}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{background:#05080a;color:var(--txt);font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--txt);font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .wrap{max-width:680px;margin:0 auto;padding:0 20px}
 
-/* ===== HERO with crossfading venue photos ===== */
-.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
 .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:cf 21s infinite;will-change:opacity}
-.s1{background-image:url(img/harbor-2.png);animation-delay:0s}
-.s2{background-image:url(img/harbor-1.png);animation-delay:7s}
-.s3{background-image:url(img/harbor-3.png);animation-delay:14s}
+.s1{background-image:url(img/harbor-2.png);animation-delay:0s}.s2{background-image:url(img/harbor-1.png);animation-delay:7s}.s3{background-image:url(img/harbor-3.png);animation-delay:14s}
 @keyframes cf{0%{opacity:0}3%{opacity:1}30%{opacity:1}36%{opacity:0}100%{opacity:0}}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,10,.55) 0%,rgba(5,8,10,.25) 35%,rgba(5,8,10,.78) 78%,#05080a 100%);z-index:1}
-.hero-in{position:relative;z-index:2;padding:0 20px 56px;max-width:680px;margin:0 auto;width:100%}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--green);border:1px solid rgba(57,255,20,.5);background:rgba(5,8,10,.5);backdrop-filter:blur(6px);padding:9px 16px;border-radius:999px}
-.pip{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);animation:p 1.8s infinite}@keyframes p{50%{opacity:.4;transform:scale(.7)}}
-h1{font-family:'Anton';font-size:clamp(52px,15vw,104px);line-height:.9;letter-spacing:-1px;margin:20px 0 0;text-shadow:0 4px 30px rgba(0,0,0,.6)}
-h1 .g{color:var(--green);text-shadow:0 0 40px rgba(57,255,20,.5)}
-.lede{color:#dfeede;font-size:clamp(16px,4.4vw,20px);margin:18px 0 0;max-width:460px;text-shadow:0 2px 14px rgba(0,0,0,.7)}
-.cdlbl{margin-top:30px;color:var(--green);font-size:12px;letter-spacing:3px;text-transform:uppercase}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,9,.82) 0%,rgba(7,8,9,.4) 30%,rgba(7,8,9,.55) 62%,rgba(7,8,9,.94) 100%);z-index:1}
+.hero-top{position:relative;z-index:2;padding:34px 20px 0;text-align:center}
+.brand{width:min(420px,86%);height:auto;mix-blend-mode:screen;filter:drop-shadow(0 4px 20px rgba(0,0,0,.5))}
+.hero-bot{position:relative;z-index:2;padding:0 20px 52px;max-width:680px;margin:0 auto;width:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--orange);border:1px solid rgba(245,166,35,.55);background:rgba(7,8,9,.5);backdrop-filter:blur(6px);padding:9px 16px;border-radius:999px}
+.pip{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 12px var(--orange);animation:p 1.8s infinite}@keyframes p{50%{opacity:.4;transform:scale(.7)}}
+h1{font-family:'Anton';font-size:clamp(50px,14vw,98px);line-height:.9;letter-spacing:-1px;margin:18px 0 0;text-shadow:0 4px 30px rgba(0,0,0,.65)}
+h1 .o{color:var(--orange);text-shadow:0 0 36px rgba(245,166,35,.5)}
+.lede{color:#e7ecf3;font-size:clamp(16px,4.2vw,19px);margin:16px 0 0;max-width:470px;text-shadow:0 2px 14px rgba(0,0,0,.7)}
+.cdlbl{margin-top:26px;color:var(--orange);font-size:12px;letter-spacing:3px;text-transform:uppercase}
 .cd{display:flex;gap:9px;margin-top:10px}
-.cd .b{background:rgba(5,8,10,.55);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:13px;padding:12px 4px;width:72px;text-align:center}
-.cd .n{font-family:'Anton';font-size:36px;color:var(--green);line-height:1}.cd .l{font-size:10px;letter-spacing:2px;color:var(--mut);text-transform:uppercase;margin-top:5px}
+.cd .b{background:rgba(7,8,9,.55);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:13px;padding:12px 4px;width:72px;text-align:center}
+.cd .n{font-family:'Anton';font-size:36px;color:var(--orange);line-height:1}.cd .l{font-size:10px;letter-spacing:2px;color:var(--mut);text-transform:uppercase;margin-top:5px}
 
-/* ===== EVENTS ===== */
-.section-h{text-align:center;padding:54px 0 6px}
-.section-h .k{color:var(--green);font-size:12px;letter-spacing:3px;text-transform:uppercase}
+/* MORE VENUES banner */
+.banner{margin:30px auto 0;max-width:640px;text-align:center;border:1px dashed rgba(78,124,196,.6);background:rgba(78,124,196,.1);border-radius:16px;padding:16px;font-weight:600;letter-spacing:1px;color:#cdd9ee}
+.banner b{color:var(--orange)}
+
+/* SECTIONS */
+.section-h{text-align:center;padding:50px 0 4px}
+.section-h .k{color:var(--blue);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:600}
 .section-h h2{font-family:'Anton';font-size:clamp(34px,9vw,52px);margin-top:8px;letter-spacing:-.5px}
 .filter{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:22px 0 4px}
 .chip{font-size:14px;font-weight:600;padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--txt);cursor:pointer;transition:.15s}
-.chip.on,.chip:hover{border-color:var(--green);background:rgba(57,255,20,.12);color:#dfffd6}
+.chip.on,.chip:hover{border-color:var(--orange);background:rgba(245,166,35,.14);color:#ffe7bf}
 .events{display:flex;flex-direction:column;gap:16px;margin:24px 0 10px}
-.ev{position:relative;border:1px solid var(--line);border-radius:20px;padding:22px;overflow:hidden;background:rgba(255,255,255,.045);backdrop-filter:blur(10px);transition:.2s}
-.ev:hover{border-color:rgba(57,255,20,.5);transform:translateY(-2px)}
+.ev{position:relative;border:1px solid var(--line);border-radius:20px;padding:22px;overflow:hidden;background:rgba(255,255,255,.05);backdrop-filter:blur(10px);transition:.2s}
+.ev:hover{border-color:rgba(245,166,35,.55);transform:translateY(-2px)}
 .ev .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-.ev .badge{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#04210a;background:var(--green);padding:5px 11px;border-radius:8px;white-space:nowrap;font-weight:700}
+.ev .badge{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#1a1206;background:var(--orange);padding:5px 11px;border-radius:8px;white-space:nowrap;font-weight:700}
 .ev .date{font-size:13px;color:var(--mut);letter-spacing:1px;text-transform:uppercase}
 .ev .flags{font-size:30px;margin-bottom:4px;letter-spacing:6px}
-.ev .match{font-family:'Anton';font-size:34px;line-height:1.05;margin:2px 0;letter-spacing:-.5px}
-.ev .away{font-size:14px;color:#9affc0;font-weight:600;margin-top:4px}
+.ev .match{font-family:'Anton';font-size:32px;line-height:1.05;margin:2px 0;letter-spacing:-.5px}
+.ev .match span{color:var(--blue)}
+.ev .away{font-size:14px;color:var(--orange);font-weight:600;margin-top:4px}
 .ev .row{display:flex;align-items:center;gap:16px;margin-top:18px}
-.ev .qr{width:104px;height:104px;border-radius:12px;border:1px solid var(--line);flex:none;display:block;background:#05080a}
+.ev .qr{width:104px;height:104px;border-radius:12px;border:1px solid var(--line);flex:none;display:block;background:#0a0c10}
 .ev .cta{flex:1}
-.btn{display:block;text-align:center;background:var(--green);color:#04210a;font-weight:700;font-size:17px;text-decoration:none;padding:15px;border-radius:13px;box-shadow:0 8px 26px rgba(57,255,20,.35)}
+.btn{display:block;text-align:center;background:var(--orange);color:#1a1206;font-weight:700;font-size:17px;text-decoration:none;padding:15px;border-radius:13px;box-shadow:0 8px 26px rgba(245,166,35,.35)}
 .btn:active{transform:scale(.98)}
 .scan{font-size:11px;color:var(--mut);text-align:center;margin-top:6px;letter-spacing:1px}
-.maplink{display:block;text-align:center;color:var(--mut);font-size:13px;text-decoration:none;margin-top:12px}.maplink:hover{color:var(--green)}
+.maplink{display:block;text-align:center;color:var(--mut);font-size:13px;text-decoration:none;margin-top:12px}.maplink:hover{color:var(--orange)}
 
-/* ===== VENUE / GALLERY ===== */
-.venue{text-align:center;margin:30px 0 0}
+/* VENUE / FOLLOW */
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
 .gallery img{width:100%;height:160px;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
 .gallery img:first-child{grid-column:1/3;height:230px}
-.venue h3{font-family:'Anton';font-size:30px}.venue p{color:var(--mut);font-size:14px;margin-top:6px}
+.venue{text-align:center}.venue h3{font-family:'Anton';font-size:28px}.venue p{color:var(--mut);font-size:14px;margin-top:6px}
 .venue iframe{width:100%;height:200px;border:0;border-radius:14px;margin-top:16px;filter:grayscale(.3) invert(.92) hue-rotate(180deg) contrast(.9)}
+.follow{text-align:center;margin:14px 0 0;border:1px solid var(--line);border-radius:20px;padding:24px;background:rgba(78,124,196,.06)}
+.follow img{width:min(360px,92%);height:auto;mix-blend-mode:screen}
+.follow p{color:var(--mut);font-size:14px;margin-top:4px}
 footer{text-align:center;color:var(--mut);font-size:13px;padding:34px 0 60px}
-footer a{color:#9affc0;text-decoration:none}.powered{margin-top:10px;font-size:12px;letter-spacing:1px}
+footer a{color:var(--orange);text-decoration:none}.powered{margin-top:10px;font-size:12px;letter-spacing:1px}
 </style>
 </head>
 <body>
 
 <section class="hero">
   <div class="slide s1"></div><div class="slide s2"></div><div class="slide s3"></div>
-  <div class="hero-in">
+  <div class="hero-top"><img class="brand" src="img/qns-lockup.png" alt="QNS Pickup — For The Culture"></div>
+  <div class="hero-bot">
     <span class="eyebrow"><span class="pip"></span> Harbor NYC · Hell's Kitchen</span>
-    <h1>ROOFTOP.<br>SPARKLERS.<br><span class="g">EVERY MATCH.</span></h1>
-    <p class="lede">World Cup 2026 watch parties at Harbor. Feel the crowd — don't watch it alone.</p>
+    <h1>WORLD CUP<br><span class="o">WATCH PARTIES</span></h1>
+    <p class="lede">Every match at Harbor. Rooftop, sparklers, the whole crew — for the culture.</p>
     <div class="cdlbl">Kickoff · June 11</div>
     <div class="cd" id="cd"></div>
   </div>
 </section>
 
 <main class="wrap">
+  <div class="banner">🔜 <b>MORE VENUES & MATCHES TO COME</b> — check back, this list keeps growing.</div>
+
   <div class="section-h"><div class="k">Get your table</div><h2>THE MATCHES</h2></div>
   <div class="filter" id="filter"></div>
   <div class="events" id="events"></div>
 
+  <div class="follow">
+    <img src="img/qns-lockup.png" alt="Follow QNS Pickup">
+    <p>Follow QNS — scan the code. For the culture.</p>
+  </div>
+
   <div class="venue">
     <div class="section-h"><div class="k">The room</div><h2>THIS IS HARBOR</h2></div>
     <div class="gallery">
-      <img src="img/harbor-2.png" alt="Harbor rooftop">
-      <img src="img/harbor-3.png" alt="Harbor lounge">
-      <img src="img/harbor-1.png" alt="Harbor interior">
+      <img src="img/harbor-2.png" alt="Harbor rooftop"><img src="img/harbor-3.png" alt="Harbor lounge"><img src="img/harbor-1.png" alt="Harbor interior">
     </div>
     <h3>HARBOR NYC</h3>
     <p>621 W 46th St · Hell's Kitchen · Rooftop + Stafford Room</p>
@@ -101,37 +114,38 @@ footer a{color:#9affc0;text-decoration:none}.powered{margin-top:10px;font-size:1
   </div>
 
   <footer>
-    Every match, the biggest crowd in the city.<br>
-    <a href="https://instagram.com/harbornewyorkcity">@harbornewyorkcity</a>
-    <div class="powered">Find every watch party near you → <a href="https://yourscene.netlify.app">YourScene</a></div>
+    QNS Pickup · For The Culture<br>
+    Every match, the biggest crowd in the city.
+    <div class="powered">Powered by <a href="https://yourscene.netlify.app">YourScene</a></div>
   </footer>
 </main>
 
 <script>
 const EVENTS = [
   { a:'MEXICO', b:'SOUTH AFRICA', fa:'🇲🇽', fb:'🇿🇦', date:'2026-06-11', badge:'Opening Day',
-    ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-10/tickets' },
+    ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-10/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176b59b21841d3b7c7439f0a1e626e' },
   { a:'PORTUGAL', b:'DR CONGO', fa:'🇵🇹', fb:'🇨🇩', date:'2026-06-17', badge:'',
-    ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-190-5-12/tickets' },
+    ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-190-5-12/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176bf04ee8496aa733439f0a1e626e' },
   { a:'ENGLAND', b:'CROATIA', fa:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', fb:'🇭🇷', date:'2026-06-17', badge:'',
-    ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11/tickets' },
+    ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176c1d9a284f5c8fe245be0a1e60d7' },
   { a:'CANADA', b:'QATAR', fa:'🇨🇦', fb:'🇶🇦', date:'2026-06-18', badge:'',
-    ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11-2/tickets' },
+    ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11-2/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176cbb537442969f6156b30a1e638d' },
   { a:'SPAIN', b:'SAUDI ARABIA', fa:'🇪🇸', fb:'🇸🇦', date:'2026-06-21', badge:'',
-    ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11-3-2/tickets' },
-  { a:'CROATIA', b:'GHANA', fa:'🇭🇷', fb:'🇬🇭', date:'2026-06-27', badge:'',
-    ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11-3-3/tickets' },
+    ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11-3-2/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176c5f294841e7938a1cde0a1e6232' },
+  { a:'MEXICO', b:'SOUTH KOREA', fa:'🇲🇽', fb:'🇰🇷', date:'', badge:'Date TBA',
+    ticket:'https://tickets.dreamhospitalitygroup.com/e/harborworldcup-189-5-11-3/tickets?utm_source=promoter&utm_name=QNS&utm_campaign=QNS&utm_id=6a176d022cd04ec3a32c51740a1e6243' },
 ];
 const fmtDate = d => new Date(d+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
 const daysAway = d => { const n=Math.ceil((new Date(d+'T12:00:00')-new Date())/864e5); return n<=0?'Today':(n===1?'Tomorrow':n+' days away'); };
-const qr = url => `https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=8&bgcolor=5-8-10&color=57-255-20&data=${encodeURIComponent(url)}`;
+const qr = url => `https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=8&bgcolor=10-12-16&color=255-255-255&data=${encodeURIComponent(url)}`;
+const sortKey = e => e.date || '9999';
 const ev = document.getElementById('events');
 function render(f){
-  ev.innerHTML = EVENTS.filter(e=>!f||e.a===f||e.b===f).map(e=>`
+  ev.innerHTML = EVENTS.filter(e=>!f||e.a===f||e.b===f).sort((x,y)=>sortKey(x).localeCompare(sortKey(y))).map(e=>`
     <div class="ev">
-      <div class="top"><div><div class="flags">${e.fa} ${e.fb}</div><div class="date">${fmtDate(e.date)}</div></div>${e.badge?`<div class="badge">${e.badge}</div>`:''}</div>
-      <div class="match">${e.a} <span style="color:#7d927d">v</span> ${e.b}</div>
-      <div class="away">🟢 ${daysAway(e.date)}</div>
+      <div class="top"><div><div class="flags">${e.fa} ${e.fb}</div>${e.date?`<div class="date">${fmtDate(e.date)}</div>`:''}</div>${e.badge?`<div class="badge">${e.badge}</div>`:''}</div>
+      <div class="match">${e.a} <span>v</span> ${e.b}</div>
+      ${e.date?`<div class="away">🟠 ${daysAway(e.date)}</div>`:''}
       <div class="row"><img class="qr" alt="Scan for tickets" src="${qr(e.ticket)}"><div class="cta"><a class="btn" href="${e.ticket}" target="_blank" rel="noopener">Get Tickets ⚽</a><div class="scan">↑ or scan the code</div></div></div>
       <a class="maplink" href="https://www.google.com/maps?q=621+W+46th+St,+New+York,+NY" target="_blank">📍 Harbor NYC · 621 W 46th St</a>
     </div>`).join('');
